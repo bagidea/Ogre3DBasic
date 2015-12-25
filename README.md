@@ -1,4 +1,4 @@
-![ScreenShot](https://github.com/bagidea/Ogre3DBasic/show.png)
+![ScreenShot](https://github.com/bagidea/Ogre3DBasic/blob/master/show.png)
 
 Sample Code Ogre3D :: http://www.ogre3d.org
 
