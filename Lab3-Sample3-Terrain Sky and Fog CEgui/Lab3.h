@@ -75,3 +75,22 @@ private:
 };
 
 #endif
+
+/*material Examples/EarlyMorningSkyBoxNoFog
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			depth_write 
+			fog_override true none
+
+			texture_unit
+			{
+				cubic_texture early_morning.jpg separateUV
+				tex_address_mode clamp
+			}
+		}
+	}
+}*/

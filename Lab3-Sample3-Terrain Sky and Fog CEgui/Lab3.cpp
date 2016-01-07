@@ -173,20 +173,20 @@ void Lab3::SetupScene()
 {
 	mScene->setAmbientLight(ColourValue(0.2, 0.2, 0.2));
  
-	Ogre::Vector3 lightDir(0.55, -0.3, 0.75);
+	Ogre::Vector3 lightDir(0.0, -0.15, -0.75);
 	lightDir.normalise();
  
 	Light* light = mScene->createLight("TestLight");
 	light->setType(Light::LT_DIRECTIONAL);
 	light->setDirection(lightDir);
 	light->setDiffuseColour(ColourValue::White);
-	light->setSpecularColour(ColourValue(0.4,0.4,0.4));
+	light->setSpecularColour(ColourValue(0.98, 0.74, 0.18));
  
 	// Fog
-	ColourValue fadeColour(0.8, 0.8, 1.0);
+	ColourValue fadeColour(0.68, 0.44, 0.08);
 	mWindow->getViewport(0)->setBackgroundColour(fadeColour);
  
-	mScene->setFog(FOG_EXP2, fadeColour, 0.002);
+	mScene->setFog(FOG_EXP2, fadeColour, 0.001);
  
 	// Terrain
 	mTerrainGlobals = OGRE_NEW TerrainGlobalOptions();
@@ -215,6 +215,8 @@ void Lab3::SetupScene()
 	}
  
 	mTerrainGroup->freeTemporaryResources();
+
+	mScene->setSkyBox(true, "Examples/EarlyMorningSkyBoxNoFog");
 
 	CEGUI::WindowManager& wmgr = CEGUI::WindowManager::getSingleton();
 	CEGUI::Window* rootWin = wmgr.loadLayoutFromFile("test.layout");
