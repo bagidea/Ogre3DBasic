@@ -41,6 +41,9 @@ Lab3::~Lab3()
 		mInput = 0;
 	}
 
+	OGRE_DELETE mTerrainGroup;
+	OGRE_DELETE mTerrainGlobals;
+
 	delete mRoot;
 }
 
