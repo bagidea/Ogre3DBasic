@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<GUILayout version="4">
+  <Window type="DefaultWindow" name="root">
+    <Window type="TaharezLook/Label" name="TerrainLabel">
+      <Property name="Position" value="{{0, 2}, {0, 2}}" />
+      <Property name="Size" value="{{0.3, 0}, {0.1, 0}}" />
+      <Property name="Text" value="Intermediate Tutorials" />
+    </Window>
+  </Window>
+</GUILayout>
