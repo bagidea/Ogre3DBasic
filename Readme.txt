@@ -51,10 +51,10 @@ OgreTerrain.lib
 ------[CEGUI]-------
 
 C/C++
-$(CEGUI_HOME)\cegui\include;$(CEGUI_HOME)\build\cegui\include;
+$(CEGUI_HOME)\cegui\include;$(CEGUI_HOME)\build\cegui\include
 
 Linker
-$(CEGUI_HOME)\build\lib;
+$(CEGUI_HOME)\build\lib
 
 Input Debug
 CEGUIBase-0_d.lib
@@ -63,5 +63,23 @@ CEGUIOgreRenderer-0_d.lib
 Input Release
 CEGUIBase-0.lib
 CEGUIOgreRenderer-0.lib
+
+--------------------
+
+------[MyGui]-------
+
+C/C++
+$(MYGUI_HOME)\MyGUIEngine\include;$(MYGUI_HOME)\Platforms\Ogre\OgrePlatform\include 
+
+Linker
+$(MYGUI_HOME)\lib\Debug;$(MYGUI_HOME)\lib\Release
+
+Input Debug
+MyGUIEngine.lib
+MyGUI.OgrePlatform.lib
+
+Input Release
+MyGUIEngine_d.lib
+MyGUI.OgrePlatform_d.lib
 
 --------------------
