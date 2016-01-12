@@ -72,7 +72,7 @@ C/C++
 $(MYGUI_HOME)\MyGUIEngine\include;$(MYGUI_HOME)\Platforms\Ogre\OgrePlatform\include 
 
 Linker
-$(MYGUI_HOME)\lib\Debug;$(MYGUI_HOME)\lib\Release
+$(MYGUI_HOME)build\lib\Debug;$(MYGUI_HOME)build\lib\Release
 
 Input Debug
 MyGUIEngine.lib
