@@ -6,10 +6,12 @@
 -bullet Version 2.82
 -OgreBullet
 
-Lab4-Sample Particle System
+-Lab4-Sample Particle System-
+
 [![Alt text for your video](http://img.youtube.com/vi/Xqv42h3HvZw/0.jpg)](https://www.youtube.com/watch?v=Xqv42h3HvZw)
 
-Lab7-OgreBullet Basic
+-Lab7-OgreBullet Basic-
+
 [![Alt text for your video](http://img.youtube.com/vi/CvinYakBkBk/0.jpg)](https://www.youtube.com/watch?v=CvinYakBkBk)
 
 Sample Code Ogre3D :: http://www.ogre3d.org
