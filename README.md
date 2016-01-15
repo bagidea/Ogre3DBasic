@@ -6,6 +6,7 @@
 -bullet Version 2.82
 -OgreBullet
 
+[![Alt text for your video](http://img.youtube.com/vi/Xqv42h3HvZw/0.jpg)](https://www.youtube.com/watch?v=Xqv42h3HvZw)
 
 Sample Code Ogre3D :: http://www.ogre3d.org
 
