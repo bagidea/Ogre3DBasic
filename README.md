@@ -2,6 +2,9 @@
 
 -Ogre3D Sdk Version 1.9
 -CEGUI Version 0.8.4
+-MyGUI Version 3.2.0
+-bullet Version 2.82
+-OgreBullet
 
 
 Sample Code Ogre3D :: http://www.ogre3d.org

@@ -83,3 +83,29 @@ MyGUIEngine_d.lib
 MyGUI.OgrePlatform_d.lib
 
 --------------------
+
+------[BULLET]-------
+
+C/C++
+$(OGREBULLET_HOME)\Collisions\include;$(OGREBULLET_HOME)\Dynamics\include;$(BULLET_HOME)\src
+
+Linker
+$(OGREBULLET_HOME)\build\lib\$(Configuration);$(BULLET_HOME)\build\lib\$(Configuration)
+
+Input Debug
+OgreBulletCollisions_d.lib
+OgreBulletDynamics_d.lib
+BulletCollision_Debug.lib
+BulletDynamics_Debug.lib
+LinearMath_Debug.lib
+BulletSoftBody_Debug.lib
+
+Input Release
+OgreBulletCollisions.lib
+OgreBulletDynamics.lib
+BulletCollision.lib
+BulletDynamics.lib
+LinearMath.lib
+BulletSoftBody.lib
+
+--------------------
