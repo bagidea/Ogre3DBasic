@@ -14,6 +14,8 @@
 
 [![Alt text for your video](http://img.youtube.com/vi/CvinYakBkBk/0.jpg)](https://www.youtube.com/watch?v=CvinYakBkBk)
 
+[![Alt text for your video](http://img.youtube.com/vi/9QHbhDRI_bI/0.jpg)](https://www.youtube.com/watch?v=9QHbhDRI_bI)
+
 Sample Code Ogre3D :: http://www.ogre3d.org
 
 Tutorial Basic :: http://www.ogre3d.org/tikiwiki/tiki-index.php?page=Basic+Tutorials
