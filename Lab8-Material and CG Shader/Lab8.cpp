@@ -192,7 +192,7 @@ void Lab8::SetupScene()
 	model->setMaterialName("BagIdeaMaterial/Sample1");
 
 	SceneNode* node = mScene->getRootSceneNode()->createChildSceneNode("ModelNode");
-	node->setPosition(-55,20,0);
+	node->setPosition(-55,30,0);
 	node->yaw(Degree(180.0));
 	node->attachObject(model);
 
