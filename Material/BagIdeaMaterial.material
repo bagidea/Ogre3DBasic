@@ -1,0 +1,109 @@
+material BagIdeaMaterial/Sample1
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture Rocks_Diffuse.tga
+			}
+
+			texture_unit
+			{
+				texture spheremap.png
+				colour_op_ex add src_texture src_current
+				colour_op_multipass_fallback one one
+				env_map spherical
+			}
+		}
+	}
+}
+
+material BagIdeaMaterial/Sample2
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture Rocks_Diffuse.tga
+			}
+		}
+	}
+}
+
+vertex_program Sample3_VS cg
+{
+	source BagIdeaCG.cg
+
+	entry_point main_Sample3_VP
+
+	profiles vs_2_0 arbvp1
+
+	default_params
+    {
+        param_named_auto worldViewProjectionMatrix worldviewproj_matrix
+    }
+}
+
+fragment_program Sample3_FS cg
+{
+	source BagIdeaCG.cg
+
+	entry_point main_Sample3_FP
+
+	profiles vs_2_0 arbfp1
+}
+
+material BagIdeaMaterial/Sample3
+{
+	technique
+    {
+        pass
+        {
+            illumination_stage ambient
+            
+            ambient 0.3 0.3 0.3
+            diffuse 1 1 1
+            specular 0 0 0
+            
+            texture_unit diffuseMap
+            {
+                texture Rocks_Diffuse.tga            
+            }
+        }
+        
+		pass
+        {
+            illumination_stage per_light
+            ambient 0 0 0
+            scene_blend add
+            
+            vertex_program_ref Sample3_VS
+            {    
+                param_named_auto objectSpaceLightPosition light_position_object_space 0 
+            }	
+        
+            fragment_program_ref Sample3_FS
+            {
+            }  
+            
+            texture_unit diffuseMap
+            {
+                texture Rocks_Diffuse.tga          
+            }
+
+            texture_unit normalMap
+            {
+                texture Rocks_Normal.tga
+            }
+
+            texture_unit
+         	{
+            	texture Rocks_Spec.tga
+         	}
+        } 
+    }
+}

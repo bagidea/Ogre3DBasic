@@ -1,0 +1,58 @@
+float3 expand(float3 v) {
+    return (v - 0.5) * 2;
+}
+
+void main_Sample3_VP(
+        float3 position: POSITION,
+        float3 normal: NORMAL,
+        float4 tangent: TEXCOORD1,
+        float2 uv: TEXCOORD0,
+        
+        out float4 outPosition: POSITION,
+        out float2 outUv: TEXCOORD0,
+        out float3 outLightDirection: TEXCOORD1,
+        
+        uniform float4x4 worldViewProjectionMatrix,
+        uniform float3 objectSpaceLightPosition
+){
+    outPosition = mul(worldViewProjectionMatrix, float4(position, 1));
+    
+    // Pass UV unchanged
+    outUv = uv;
+    
+    // Object space light vector
+    float3 lightDirection = objectSpaceLightPosition - position;
+    
+    // Build object-space to texture-space transform matrix
+    float3 binormal = cross(tangent.xyz, normal)* tangent.www;
+    float3x3 rotationMatrix = float3x3(tangent.xyz, binormal, normal);
+    
+    // Rotate the light vector
+    outLightDirection = mul(rotationMatrix, lightDirection);
+}
+
+void main_Sample3_FP(
+        float4 position: POSITION,
+        float2 uv: TEXCOORD0,
+        float3 lightDirection: TEXCOORD1,
+        
+        out float4 outColor: COLOR,
+        
+        uniform sampler2D diffuseMap,
+        uniform sampler2D normalMap,
+        uniform sampler2D specularMap
+){
+    // Normalizes light vector
+    float3 lightVector = normalize(lightDirection);
+
+    // Sample and expand the normal map texture
+    float3 diffuseTex = tex2D(diffuseMap, uv).rgb;
+    float3 specMap = tex2D(specularMap,uv).rgb;
+    float3 normalTex = tex2D(normalMap, uv).rgb;
+    float3 normal = expand(normalTex);  
+	normal.x*=-1.0;
+	normal.y*=-1.0;
+    
+    // Compute diffuse lighting
+    outColor = float4(saturate(dot(normal, lightVector))*(diffuseTex + specMap),1);       
+}
