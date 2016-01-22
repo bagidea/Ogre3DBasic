@@ -18,6 +18,10 @@
 
 [![Alt text for your video](http://img.youtube.com/vi/9QHbhDRI_bI/0.jpg)](https://www.youtube.com/watch?v=9QHbhDRI_bI)
 
+-Lab9-CompositorBasic-
+
+[![Alt text for your video](http://img.youtube.com/vi/7t3pb2bwXTk/0.jpg)](https://www.youtube.com/watch?v=7t3pb2bwXTk)
+
 Sample Code Ogre3D :: http://www.ogre3d.org
 
 Tutorial Basic :: http://www.ogre3d.org/tikiwiki/tiki-index.php?page=Basic+Tutorials
