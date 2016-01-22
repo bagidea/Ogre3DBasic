@@ -75,12 +75,12 @@ Linker
 $(MYGUI_HOME)build\lib\Debug;$(MYGUI_HOME)build\lib\Release
 
 Input Debug
-MyGUIEngine.lib
-MyGUI.OgrePlatform.lib
-
-Input Release
 MyGUIEngine_d.lib
 MyGUI.OgrePlatform_d.lib
+
+Input Release
+MyGUIEngine.lib
+MyGUI.OgrePlatform.lib
 
 --------------------
 
